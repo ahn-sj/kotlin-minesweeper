@@ -1,4 +1,4 @@
-package minesweeper
+package minesweeper.cell
 
 data class Width(val value: Int) {
     init {

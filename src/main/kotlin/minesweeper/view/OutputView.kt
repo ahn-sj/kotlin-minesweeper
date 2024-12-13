@@ -1,4 +1,6 @@
-package minesweeper
+package minesweeper.view
+
+import minesweeper.cell.Cells
 
 object OutputView {
     private const val CELL_SEPARATOR = " "

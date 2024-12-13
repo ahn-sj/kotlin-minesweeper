@@ -1,5 +1,10 @@
 package minesweeper
 
+import minesweeper.cell.Cell
+import minesweeper.cell.Cells
+import minesweeper.cell.Height
+import minesweeper.cell.Width
+
 data class Minesweeper(
     val height: Height,
     val width: Width,

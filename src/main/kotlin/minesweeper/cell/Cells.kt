@@ -1,4 +1,4 @@
-package minesweeper
+package minesweeper.cell
 
 data class Cells(val cells: List<Cell>) {
     init {

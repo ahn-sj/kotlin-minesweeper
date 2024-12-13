@@ -1,4 +1,4 @@
-package minesweeper
+package minesweeper.cell
 
 data class Cell(
     val height: Height,

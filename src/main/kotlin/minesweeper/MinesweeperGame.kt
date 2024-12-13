@@ -1,5 +1,8 @@
 package minesweeper
 
+import minesweeper.view.InputView
+import minesweeper.view.OutputView
+
 fun main() {
     val height = InputView.getHeight()
     val width = InputView.getWidth()
