@@ -21,9 +21,7 @@ class HeightTest : StringSpec({
         val value = 0
 
         // Act:
-        val result = shouldThrow<IllegalArgumentException> {
-            Height(value)
-        }
+        val result = shouldThrow<IllegalArgumentException> { Height(value) }
 
         // Assert:
         result.message shouldBe "높이는 1이상이어야 합니다. input = $value"

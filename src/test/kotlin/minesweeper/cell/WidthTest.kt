@@ -21,9 +21,7 @@ class WidthTest : StringSpec({
         val value = 0
 
         // Act:
-        val result = shouldThrow<IllegalArgumentException> {
-            Width(value)
-        }
+        val result = shouldThrow<IllegalArgumentException> { Width(value) }
 
         // Assert:
         result.message shouldBe "너비는 1이상이어야 합니다. input = $value"

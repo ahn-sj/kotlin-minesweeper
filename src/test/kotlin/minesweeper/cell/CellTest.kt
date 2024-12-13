@@ -3,14 +3,14 @@ package minesweeper.cell
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
-class CellTest : StringSpec ({
+class CellTest : StringSpec({
     "셀은 높이와 너비로 생성할 수 있다" {
         // Arrange:
-        val height = Height(1)
         val width = Width(1)
+        val height = Height(1)
 
         // Act:
-        val cell = Cell(height, width)
+        val cell = Cell(width, height)
 
         // Assert:
         cell.height shouldBe Height(1)
@@ -21,9 +21,9 @@ class CellTest : StringSpec ({
     "지뢰 셀을 생성할 수 있다" {
 
         // Arrange:
-        val height = Height(1)
         val width = Width(1)
-        val cell = Cell(height, width, true)
+        val height = Height(1)
+        val cell = Cell(width, height, true)
 
         // Act:
         val mineCell = cell.createMineCell()

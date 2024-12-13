@@ -7,12 +7,14 @@ data class Cells(val cells: List<Cell>) {
 
     fun placeMines(minePositions: List<Cell>): Cells {
         val mineSet = minePositions.toSet()
-        return Cells(cells.map { cell ->
-            if (cell in mineSet) {
-                cell.createMineCell()
-            }
-            cell
-        })
+        return Cells(
+            cells.map { cell ->
+                if (cell in mineSet) {
+                    cell.createMineCell()
+                }
+                cell
+            },
+        )
     }
 
     companion object {
@@ -20,7 +22,7 @@ data class Cells(val cells: List<Cell>) {
             heightRange: IntRange,
             widthRange: IntRange,
         ): Cells {
-            val cells = heightRange.flatMap { height -> (widthRange).map { width -> Cell(Height(height), Width(width)) } }
+            val cells = heightRange.flatMap { height -> (widthRange).map { width -> Cell(Width(width), Height(height)) } }
             return Cells(cells)
         }
     }

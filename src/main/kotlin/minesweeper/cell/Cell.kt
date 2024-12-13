@@ -1,11 +1,11 @@
 package minesweeper.cell
 
 data class Cell(
-    val height: Height,
     val width: Width,
+    val height: Height,
     var isMine: Boolean = false,
 ) {
     fun createMineCell(): Cell {
-        return Cell(height, width, true)
+        return Cell(width, height, true)
     }
 }
