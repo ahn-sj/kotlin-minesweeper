@@ -7,7 +7,12 @@ data class Cells(val cells: List<Cell>) {
 
     fun placeMines(minePositions: List<Cell>): Cells {
         val mineSet = minePositions.toSet()
-        return Cells(cells.map { cell -> cell.takeIf { it in mineSet }?.createMineCell() ?: cell })
+        return Cells(cells.map { cell ->
+            if (cell in mineSet) {
+                cell.createMineCell()
+            }
+            cell
+        })
     }
 
     companion object {

@@ -5,7 +5,7 @@
 - [ ] sealed interface/class를 반영해보기
   - [ ] 학습하기
   - [ ] 적용하기
-- [ ] takeIf를 사용하지 않고 if문으로 풀어보기 (Cells.kt)
+- [x] takeIf를 사용하지 않고 if문으로 풀어보기 (Cells.kt)
 - [ ] Minesweeper가 Range의 관심사를 갖도록 변경
 - [ ] 지뢰가 중복된 자리에 생성되지 않도록 개선
   - [ ] 지뢰의 수는 높이 * 너비의 값보다 클 수 없다라는 테스트 시나리오 추가
